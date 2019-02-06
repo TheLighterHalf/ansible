@@ -1,0 +1,10 @@
+---
+- hosts: windows
+  gather_facts: true
+  tasks:
+  - name: add user
+    win_user:
+      name: dummy
+      state: present
+	  password: "B0bPa$$wrd2"
+	  groups: Administrators
